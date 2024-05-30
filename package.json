@@ -1,7 +1,22 @@
 {
-  "name": "bitbucket-merge-check",
-  "version": "1.0.2",
-  "main": "index.js",
-  "license": "MIT",
-  "private": true
+    "name": "bitbucket-merge-check",
+    "version": "1.0.2",
+    "main": "index.js",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "lint": "eslint --ext .ts src && prettier --check src/**/*.ts && tsc --noEmit",
+        "format": "eslint --ext .ts --fix src && prettier --write src/**/*.ts"
+    },
+    "dependencies": {
+        "@forge/api": "^3.6.0"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^7.9.0",
+        "@typescript-eslint/parser": "^7.9.0",
+        "eslint": "^8.57.0",
+        "eslint-plugin-react-hooks": "^4.6.2",
+        "prettier": "^3.1.0",
+        "typescript": "^5.2.2"
+    }
 }
